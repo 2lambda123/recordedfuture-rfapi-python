@@ -18,8 +18,8 @@ if sys.version_info[0] > 2:
 class ConnectApiClientTest(unittest.TestCase):
     _multiprocess_can_split_ = True
 
-    expected_riskrule_keys = set(['name', 'description', 'count',
-                                  'criticality', 'criticalityLabel'])
+    expected_riskrule_keys = {'name', 'description', 'count',
+                                  'criticality', 'criticalityLabel'}
 
     @unittest.skipUnless(IS_DEFAULT_API_URL, IS_DEFAULT_API_URL_MSG)
     def test_domain_search(self):
